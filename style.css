@@ -1,0 +1,123 @@
+:root {
+    --body-bg: linear-gradient(270deg, rgba(255,253,228,1) 5%, rgba(0,90,167,1) 100%);
+    --elem-item: #0059a724;
+    --text: rgb(23, 32, 67);
+    --light: #fffef6f7;
+    --btn-bg: #004e922e;
+    --btn-active: #004e924c;
+}
+
+
+* {
+    box-sizing: border-box;
+    color: var(--text);
+}
+body {
+    margin: 0;
+    font-size: 1.2rem;
+    background: var(--body-bg);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: var(--btn-bg);
+}
+button:hover {
+    opacity: 0.8;
+    transition: 0.1s ease-in;
+}
+button:active {
+    background: var(--btn-active);
+}
+
+
+header {
+    height: 100px;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--elem-item);
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 500px;
+    margin: 2rem auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--elem-item);
+}
+form input, form select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--light);
+}
+input[type="text"] {
+    width: 100%;
+}
+form > button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8em;
+    border-radius: 5px;
+}
+
+
+ul {
+    width: 500px;
+    margin: 2rem auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--elem-item);
+}
+.todo-item {
+    display: flex;
+    margin: 10px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 7px;
+    background-color: var(--elem-item);
+    gap: 1rem;
+}
+.todo-item div {
+    width: 100%;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+.removeBtn {
+    width: 22px;
+    cursor: pointer;
+}
+.removeBtn:hover {
+    opacity: 0.7;
+    transition: 0.2s ease-in;
+}
+
+
+#alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 30px 50px;
+    text-align: center;
+    background-color: var(--light);
+    border-radius: 15px;
+}
+#alert button {
+    margin-top: 20px;
+    padding: 0.6rem 0.7rem;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.close {
+    display: none;
+}
